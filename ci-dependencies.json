@@ -3,9 +3,8 @@
   "packageRules": [
     {
       "description": "github-actions-dependencies | all | configure labels and semantic commit type/scope",
-      "labels": [
-        "update:github-actions",
-        "renovate"
+      "addLabels": [
+        "update:github-actions"
       ],
       "matchFileNames": [
         ".github/workflows/**"
