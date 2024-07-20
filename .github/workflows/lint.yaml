@@ -31,11 +31,10 @@ jobs:
           - .shellcheckrc
           renovate:
           - .github/renovate.json
-          - **.json
+          presets:
+          - *.json
           - '!package.json'
           - '!package-lock.json'
-          - '!.github/workflows/**.json'
-          - '!.vscode/**.json'
 
     - name: Setup poetry
       run: pipx install poetry==$POETRY_VERSION
@@ -140,13 +139,17 @@ jobs:
       shell: bash
       # yamllint disable-line rule:indentation
       run: |
-        npm install --no-fund --no-audit renovate
-        echo "Validating renovate main configuration..."
+        echo "Validating renovate configuration..."
         echo ".github/renovate.json:"
         npx --yes --package renovate -- renovate-config-validator .github/renovate.json | pr -t -o 4
-        echo
-        echo "Validating renovate sub configuration..."
-        for rc in $(find .github/renovate -type f -name '*.json' | sort); do
+
+    - name: validate-renovate-presets
+      if: (success() || failure()) && (steps.changed-files-yaml.outputs.presets_any_changed == 'true' || github.event_name == 'workflow_dispatch')
+      shell: bash
+      # yamllint disable-line rule:indentation
+      run: |
+        echo "Validating renovate presets..."
+        for rc in $(find . -maxdepth 1 -type f -name '*.json' -not -name 'package*' | sort); do
           echo "${rc}:"
           npx --yes --package renovate -- renovate-config-validator ${rc} | pr -t -o 4
         done
