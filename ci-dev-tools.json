@@ -126,6 +126,18 @@
         "major"
       ],
       "minimumReleaseAge": "90 days"
+    },
+    {
+      "description": "dev-tools(npm) | all | renovate package should be update once every 7 days",
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "renovate"
+      ],
+      "schedule": [
+        "every 7 day"
+      ]
     }
   ],
   "pre-commit": {

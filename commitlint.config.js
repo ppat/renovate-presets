@@ -34,6 +34,10 @@ module.exports = {
     'scope-enum': [2, 'always',
       [
         '',
+        'ci-dependencies',
+        'ci-github-actions',
+        'ci-dev-tools',
+        'default-commit-message'
       ]
     ],
 
