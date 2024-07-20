@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "commitMessageAction": "Update",
+      "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
+      "commitMessageTopic": "{{depName}}",
+      "description": "all | major/minor/patch | configure commit message segments",
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "commitMessageAction": "Pin",
+      "commitMessageExtra": "({{#if isPinDigest}}{{currentDigestShort}} -> {{newDigestShort}}{{else}}{{currentValue}} -> {{newValue}}{{/if}})",
+      "commitMessageTopic": "{{depName}}",
+      "description": "all | pin | configure commit message segments",
+      "matchUpdateTypes": [
+        "digest",
+        "pin",
+        "pinDigest"
+      ]
+    }
+  ],
+  "semanticCommits": "enabled",
+  "semanticCommitScope": "",
+  "semanticCommitType": "chore"
+}

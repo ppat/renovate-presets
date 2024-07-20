@@ -1,0 +1,51 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "github-actions | all | configure labels and semantic commit type/scope",
+      "labels": [
+        "update:github-actions",
+        "renovate"
+      ],
+      "matchManagers": [
+        "github-actions"
+      ],
+      "semanticCommitScope": "github-actions",
+      "semanticCommitType": "ci",
+      "separateMajorMinor": true,
+      "separateMinorPatch": false,
+      "separateMultipleMajor": true,
+      "separateMultipleMinor": false
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "description": "github-actions | minor/patch/pin/digest | configure automerge, group and min release age",
+      "groupName": "github-actions-versions-non-major",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "minor",
+        "patch",
+        "pin",
+        "pinDigest"
+      ],
+      "minimumReleaseAge": "30 days",
+      "platformAutomerge": true
+    },
+    {
+      "automerge": false,
+      "description": "github-actions | major | configure automerge, group and min release age",
+      "groupName": "github-actions-versions-major",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "minimumReleaseAge": "90 days"
+    }
+  ]
+}
