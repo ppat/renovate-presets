@@ -129,6 +129,7 @@
     },
     {
       "description": "dev-tools(npm) | all | renovate package should be update once every 7 days",
+      "fetchChangeLogs": "off",
       "matchManagers": [
         "npm"
       ],

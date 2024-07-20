@@ -13,12 +13,20 @@
       ]
     },
     {
+      "commitMessageAction": "Update Digest",
+      "commitMessageExtra": "({{currentDigestShort}} -> {{newDigestShort}})",
+      "commitMessageTopic": "{{depName}}",
+      "description": "all | digest | configure commit message segments",
+      "matchUpdateTypes": [
+        "digest"
+      ]
+    },
+    {
       "commitMessageAction": "Pin",
-      "commitMessageExtra": "({{#if isPinDigest}}{{currentDigestShort}} -> {{newDigestShort}}{{else}}{{currentValue}} -> {{newValue}}{{/if}})",
+      "commitMessageExtra": "",
       "commitMessageTopic": "{{depName}}",
       "description": "all | pin | configure commit message segments",
       "matchUpdateTypes": [
-        "digest",
         "pin",
         "pinDigest"
       ]
