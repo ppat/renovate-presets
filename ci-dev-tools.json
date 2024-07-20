@@ -1,0 +1,136 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "description": "dev-tools(npm/poetry) | all | npm/poetry dev deps | configure labels and semantic commit type/scope",
+      "labels": [
+        "update:dev-tools",
+        "renovate"
+      ],
+      "matchDepTypes": [
+        "devDependencies",
+        "dev-dependencies",
+        "dev"
+      ],
+      "matchManagers": [
+        "npm",
+        "poetry"
+      ],
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "ci",
+      "separateMajorMinor": true,
+      "separateMinorPatch": false,
+      "separateMultipleMajor": true,
+      "separateMultipleMinor": false
+    },
+    {
+      "description": "dev-tools(pre-commit) | all | pre-commit | configure labels and semantic commit type/scope",
+      "labels": [
+        "update:dev-tools",
+        "renovate"
+      ],
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "ci",
+      "separateMajorMinor": true,
+      "separateMinorPatch": false,
+      "separateMultipleMajor": true,
+      "separateMultipleMinor": false
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "{{manager}} lockfile",
+      "description": "dev-tools(npm/poetry) | lockfile | configure automerge, group and min release age",
+      "groupName": "dev-tools-{{manager}}-lockfile",
+      "matchManagers": [
+        "npm",
+        "poetry"
+      ],
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "minimumReleaseAge": "30 days",
+      "platformAutomerge": true
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "commitMessageTopic": "{{manager}} (non-major)",
+      "description": "dev-tools(npm/poetry) | minor/patch | configure automerge, group and min release age",
+      "groupName": "dev-tools-{{manager}}-non-major",
+      "matchDepTypes": [
+        "devDependencies",
+        "dev-dependencies",
+        "dev"
+      ],
+      "matchManagers": [
+        "npm",
+        "poetry"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "minimumReleaseAge": "30 days",
+      "platformAutomerge": true
+    },
+    {
+      "automerge": false,
+      "commitMessageTopic": "{{manager}} (major)",
+      "description": "dev-tools(npm/poetry) | major | configure automerge, group and min release age",
+      "groupName": "dev-tools-{{manager}}-major",
+      "matchDepTypes": [
+        "devDependencies",
+        "dev-dependencies",
+        "dev"
+      ],
+      "matchManagers": [
+        "npm",
+        "poetry"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "minimumReleaseAge": "90 days"
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "commitMessageTopic": "{{manager}} (non-major)",
+      "description": "dev-tools(pre-commit) | minor/patch | configure automerge, group and min release age",
+      "groupName": "dev-tools-{{manager}}-non-major",
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "minimumReleaseAge": "30 days",
+      "platformAutomerge": true
+    },
+    {
+      "automerge": false,
+      "commitMessageTopic": "{{manager}} (major)",
+      "description": "dev-tools(pre-commit) | major | configure automerge, group and min release age",
+      "groupName": "dev-tools-{{manager}}-major",
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "minimumReleaseAge": "90 days"
+    }
+  ],
+  "pre-commit": {
+    "enabled": true
+  }
+}

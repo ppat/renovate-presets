@@ -15,7 +15,11 @@
   "extends": [
     "config:best-practices",
     "group:linters",
-    "mergeConfidence:all-badges"
+    "mergeConfidence:all-badges",
+    "github>ppat/renovate-presets:default-commit-message",
+    "github>ppat/renovate-presets:ci-dependencies",
+    "github>ppat/renovate-presets:ci-dev-tools",
+    "github>ppat/renovate-presets:ci-github-actions"
   ],
   "internalChecksFilter": "strict",
   "prConcurrentLimit": 30,
