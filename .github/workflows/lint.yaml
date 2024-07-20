@@ -32,7 +32,7 @@ jobs:
           renovate:
           - .github/renovate.json
           presets:
-          - *.json
+          - '*.json'
           - '!package.json'
           - '!package-lock.json'
 
