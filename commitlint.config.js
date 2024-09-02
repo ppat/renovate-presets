@@ -37,7 +37,9 @@ module.exports = {
         'ci-dependencies',
         'ci-github-actions',
         'ci-dev-tools',
-        'default-commit-message'
+        'default-commit-message',
+        'dev-tools',
+        'github-actions'
       ]
     ],
 
