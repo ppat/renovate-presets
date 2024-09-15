@@ -4,7 +4,7 @@
     {
       "description": "github-actions-dependencies | all | configure labels and semantic commit type/scope",
       "addLabels": [
-        "update:github-actions"
+        "dependency-type:github-actions"
       ],
       "matchFileNames": [
         ".github/workflows/**"
