@@ -4,7 +4,7 @@
     {
       "description": "github-actions | all | configure labels and semantic commit type/scope",
       "addLabels": [
-        "update:github-actions"
+        "dependency-type:github-actions"
       ],
       "matchManagers": [
         "github-actions"
@@ -19,7 +19,21 @@
     {
       "automerge": true,
       "automergeType": "pr",
-      "description": "github-actions | minor/patch/pin/digest | configure automerge, group and min release age",
+      "description": "github-actions | pin | configure automerge and group",
+      "groupName": "github-actions-versions-non-major",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "pin",
+        "pinDigest"
+      ],
+      "platformAutomerge": true
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "description": "github-actions | minor/patch/digest | configure automerge, group and min release age",
       "groupName": "github-actions-versions-non-major",
       "matchManagers": [
         "github-actions"
@@ -27,9 +41,7 @@
       "matchUpdateTypes": [
         "digest",
         "minor",
-        "patch",
-        "pin",
-        "pinDigest"
+        "patch"
       ],
       "minimumReleaseAge": "30 days",
       "platformAutomerge": true
