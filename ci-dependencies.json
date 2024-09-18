@@ -2,6 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
+      "addLabels": [
+        "dependency-type:{{datasource}}",
+        "dependency:{{packageName}}"
+      ],
       "description": "github-actions-dependencies | all | configure labels and semantic commit type/scope",
       "matchFileNames": [
         ".github/workflows/**"

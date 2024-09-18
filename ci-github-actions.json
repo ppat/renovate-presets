@@ -4,7 +4,8 @@
     {
       "description": "github-actions | all | configure labels and semantic commit type/scope",
       "addLabels": [
-        "dependency-type:github-actions"
+        "dependency-type:github-actions",
+        "dependency:{{packageName}}"
       ],
       "matchManagers": [
         "github-actions"
