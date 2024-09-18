@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "commitMessageAction": "Update",
+      "commitMessageAction": "update",
       "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
       "commitMessageTopic": "{{depName}}",
       "description": "all | major/minor/patch | configure commit message segments",
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "commitMessageAction": "Update Digest",
+      "commitMessageAction": "update Digest",
       "commitMessageExtra": "({{currentDigestShort}} -> {{newDigestShort}})",
       "commitMessageTopic": "{{depName}}",
       "description": "all | digest | configure commit message segments",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "commitMessageAction": "Pin",
+      "commitMessageAction": "pin",
       "commitMessageExtra": "",
       "commitMessageTopic": "{{depName}}",
       "description": "all | pin | configure commit message segments",
