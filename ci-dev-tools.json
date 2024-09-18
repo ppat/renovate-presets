@@ -7,7 +7,8 @@
     {
       "description": "dev-tools(npm/poetry) | all | npm/poetry dev deps | configure labels and semantic commit type/scope",
       "addLabels": [
-        "dependency-type:dev-tools"
+        "dependency-type:dev-tools",
+        "dependency:{{manager}}-packages"
       ],
       "matchDepTypes": [
         "devDependencies",
@@ -28,7 +29,8 @@
     {
       "description": "dev-tools(pre-commit) | all | pre-commit | configure labels and semantic commit type/scope",
       "addLabels": [
-        "dependency-type:dev-tools"
+        "dependency-type:dev-tools",
+        "dependency:{{manager}}-packages"
       ],
       "matchManagers": [
         "pre-commit"
