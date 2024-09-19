@@ -3,7 +3,7 @@
   "packageRules": [
     {
       "addLabels": [
-        "dependency-type:{{datasource}}"
+        "dependency-type:dev-tools"
       ],
       "description": "github-actions-dependencies | all | configure labels and semantic commit type/scope",
       "matchFileNames": [
