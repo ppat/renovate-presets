@@ -2,12 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "description": "github-actions | all | configure labels and semantic commit type/scope",
+      "description": "github-actions | all | configure semantic commit scope",
       "matchManagers": [
         "github-actions"
       ],
       "semanticCommitScope": "github-actions",
-      "semanticCommitType": "ci",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,

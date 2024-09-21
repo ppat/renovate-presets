@@ -5,7 +5,7 @@
   },
   "packageRules": [
     {
-      "description": "dev-tools(npm/poetry) | all | npm/poetry dev deps | configure labels and semantic commit type/scope",
+      "description": "dev-tools(npm/poetry) | all | npm/poetry dev deps | configure semantic commit scope",
       "matchDepTypes": [
         "devDependencies",
         "dev-dependencies",
@@ -16,19 +16,17 @@
         "poetry"
       ],
       "semanticCommitScope": "dev-tools",
-      "semanticCommitType": "ci",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
       "separateMultipleMinor": false
     },
     {
-      "description": "dev-tools(pre-commit) | all | pre-commit | configure labels and semantic commit type/scope",
+      "description": "dev-tools(pre-commit) | all | pre-commit | configure semantic commit scope",
       "matchManagers": [
         "pre-commit"
       ],
       "semanticCommitScope": "dev-tools",
-      "semanticCommitType": "ci",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
@@ -37,7 +35,7 @@
     {
       "automerge": true,
       "automergeType": "pr",
-      "commitMessageAction": "Update",
+      "commitMessageAction": "update",
       "commitMessageTopic": "{{manager}} lockfile",
       "description": "dev-tools(npm/poetry) | lockfile | configure automerge, group and min release age",
       "groupName": "dev-tools-{{manager}}-lockfile",

@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "description": "github-actions-dependencies | all | configure labels and semantic commit type/scope",
+      "description": "github-actions-dependencies | all | configure semantic commit scope",
       "matchFileNames": [
         ".github/workflows/**"
       ],
@@ -10,7 +10,6 @@
         "custom.regex"
       ],
       "semanticCommitScope": "github-actions",
-      "semanticCommitType": "ci",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
