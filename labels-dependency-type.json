@@ -18,15 +18,6 @@
       "matchDatasources": [
         "helm"
       ]
-    },
-    {
-      "addLabels": [
-        "dependency-type:kubernetes-api"
-      ],
-      "description": "datasource=kubernetes-api | add label dependency-type",
-      "matchDatasources": [
-        "kubernetes-api"
-      ]
     }
   ]
 }
