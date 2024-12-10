@@ -149,6 +149,7 @@ jobs:
       # yamllint disable-line rule:indentation
       run: |
         echo "Validating renovate presets..."
+        export NODE_OPTIONS="$NODE_OPTIONS --no-deprecation"
         for rc in $(find . -maxdepth 1 -type f -name '*.json' -not -name 'package*' | sort); do
           echo "${rc}:"
           npx --yes --package renovate -- renovate-config-validator ${rc} | pr -t -o 4

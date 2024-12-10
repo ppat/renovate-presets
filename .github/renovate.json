@@ -17,6 +17,10 @@
     "group:linters",
     "mergeConfidence:all-badges",
     "github>ppat/renovate-presets:default-commit-message",
+    "github>ppat/renovate-presets:semantic-commit-scope",
+    "github>ppat/renovate-presets:semantic-commit-type",
+    "github>ppat/renovate-presets:min-release-age",
+    "github>ppat/renovate-presets:automerge.json",
     "github>ppat/renovate-presets:ci-dependencies",
     "github>ppat/renovate-presets:ci-dev-tools",
     "github>ppat/renovate-presets:ci-github-actions"
