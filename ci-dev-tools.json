@@ -5,7 +5,10 @@
   },
   "packageRules": [
     {
-      "description": "dev-tools(npm/poetry) | configure version separation and grouping",
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "dev-tools(npm/poetry) | configure grouping, labels and version separation",
       "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchDepTypes": [
         "devDependencies",
@@ -22,7 +25,10 @@
       "separateMultipleMinor": false
     },
     {
-      "description": "dev-tools(pre-commit) | configure version separation and grouping",
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "dev-tools(pre-commit) | configure grouping, labels and version separation",
       "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchManagers": [
         "pre-commit"
@@ -33,9 +39,12 @@
       "separateMultipleMinor": false
     },
     {
+      "addLabels": [
+        "dependency-type:lockfile"
+      ],
       "commitMessageAction": "update lockfile",
       "commitMessageTopic": "{{manager}}",
-      "description": "dev-tools(npm/poetry) | configure grouping and commit message",
+      "description": "dev-tools(npm/poetry) | configure grouping, labels and version separation",
       "groupName": "dev-tools-{{manager}}-lockfile",
       "matchManagers": [
         "npm",

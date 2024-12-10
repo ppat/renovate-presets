@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "addLabels": [
+        "dependency-type:docker-image"
+      ],
+      "description": "datasource=docker | add label dependency-type",
+      "matchDatasources": [
+        "docker"
+      ]
+    },
+    {
+      "addLabels": [
+        "dependency-type:helm-chart"
+      ],
+      "description": "datasource=helm | add label dependency-type",
+      "matchDatasources": [
+        "helm"
+      ]
+    },
+    {
+      "addLabels": [
+        "dependency-type:kubernetes-api"
+      ],
+      "description": "datasource=kubernetes-api | add label dependency-type",
+      "matchDatasources": [
+        "kubernetes-api"
+      ]
+    }
+  ]
+}

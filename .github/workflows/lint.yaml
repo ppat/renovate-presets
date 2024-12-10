@@ -140,6 +140,7 @@ jobs:
       # yamllint disable-line rule:indentation
       run: |
         echo "Validating renovate configuration..."
+        export NODE_OPTIONS="$NODE_OPTIONS --no-deprecation"
         echo ".github/renovate.json:"
         npx --yes --package renovate -- renovate-config-validator .github/renovate.json | pr -t -o 4
 

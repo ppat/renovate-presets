@@ -2,7 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "description": "github-actions-dependencies | configure version separation and grouping",
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "github-actions-dependencies | configure grouping, labels and version separation",
       "groupName": "github-actions-dependencies",
       "matchFileNames": [
         ".github/workflows/**"

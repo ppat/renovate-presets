@@ -19,6 +19,7 @@
     "github>ppat/renovate-presets:default-commit-message",
     "github>ppat/renovate-presets:semantic-commit-scope",
     "github>ppat/renovate-presets:semantic-commit-type",
+    "github>ppat/renovate-presets:labels-dependency-type",
     "github>ppat/renovate-presets:min-release-age",
     "github>ppat/renovate-presets:automerge.json",
     "github>ppat/renovate-presets:ci-dependencies",
