@@ -2,51 +2,21 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "description": "github-actions-dependencies | all | configure semantic commit scope",
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "github-actions-dependencies | configure grouping, labels and version separation",
+      "groupName": "github-actions-dependencies",
       "matchFileNames": [
         ".github/workflows/**"
       ],
       "matchManagers": [
         "custom.regex"
       ],
-      "semanticCommitScope": "github-actions",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
       "separateMultipleMinor": false
-    },
-    {
-      "automerge": true,
-      "automergeType": "pr",
-      "description": "github-actions-dependencies | minor/patch | configure automerge, group and min release age",
-      "groupName": "github-actions-dependencies-non-major",
-      "matchFileNames": [
-        ".github/workflows/**"
-      ],
-      "matchManagers": [
-        "custom.regex"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "minimumReleaseAge": "30 days",
-      "platformAutomerge": true
-    },
-    {
-      "automerge": false,
-      "description": "github-actions-dependencies | major | configure automerge, group and min release age",
-      "groupName": "github-actions-dependencies-major",
-      "matchFileNames": [
-        ".github/workflows/**"
-      ],
-      "matchManagers": [
-        "custom.regex"
-      ],
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "minimumReleaseAge": "90 days"
     }
   ]
 }
