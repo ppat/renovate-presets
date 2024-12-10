@@ -8,7 +8,22 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "description": "dev-tools(npm/poetry) | configure grouping, labels and version separation",
+      "description": "matchFileNames=[.node-version] | configure labels, semantic commits and version separation",
+      "matchFileNames": [
+        ".node-version"
+      ],
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
+      "separateMajorMinor": true,
+      "separateMinorPatch": false,
+      "separateMultipleMajor": true,
+      "separateMultipleMinor": false
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "dev-tools(npm/poetry) | configure grouping, labels, semantic commits and version separation",
       "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchDepTypes": [
         "devDependencies",
@@ -19,6 +34,8 @@
         "npm",
         "poetry"
       ],
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
@@ -28,11 +45,13 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "description": "dev-tools(pre-commit) | configure grouping, labels and version separation",
+      "description": "dev-tools(pre-commit) | configure grouping, labels, semantic commits and version separation",
       "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchManagers": [
         "pre-commit"
       ],
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
@@ -44,7 +63,7 @@
       ],
       "commitMessageAction": "update lockfile",
       "commitMessageTopic": "{{manager}}",
-      "description": "dev-tools(npm/poetry) | configure grouping, labels and version separation",
+      "description": "dev-tools(npm/poetry) | configure grouping, labels, semantic commits and version separation",
       "groupName": "dev-tools-{{manager}}-lockfile",
       "matchManagers": [
         "npm",
@@ -52,6 +71,12 @@
       ],
       "matchUpdateTypes": [
         "lockFileMaintenance"
+      ],
+      "minimumReleaseAge": "7 days",
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
+      "schedule": [
+        "every 30 day"
       ]
     },
     {

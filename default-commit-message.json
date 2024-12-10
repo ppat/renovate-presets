@@ -5,31 +5,43 @@
       "commitMessageAction": "update",
       "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
       "commitMessageTopic": "{{depName}}",
-      "description": "all | major/minor/patch | configure commit message segments",
+      "description": "all | major/minor | configure default commit message segments",
       "matchUpdateTypes": [
         "major",
-        "minor",
-        "patch"
-      ]
+        "minor"
+      ],
+      "semanticCommitType": "feat"
     },
     {
-      "commitMessageAction": "update Digest",
+      "commitMessageAction": "update",
+      "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
+      "commitMessageTopic": "{{depName}}",
+      "description": "all | patch | configure default commit message segments",
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "semanticCommitType": "fix"
+    },
+    {
+      "commitMessageAction": "update digest",
       "commitMessageExtra": "({{currentDigestShort}} -> {{newDigestShort}})",
       "commitMessageTopic": "{{depName}}",
-      "description": "all | digest | configure commit message segments",
+      "description": "all | digest | configure default commit message segments",
       "matchUpdateTypes": [
         "digest"
-      ]
+      ],
+      "semanticCommitType": "fix"
     },
     {
       "commitMessageAction": "pin",
       "commitMessageExtra": "",
       "commitMessageTopic": "{{depName}}",
-      "description": "all | pin | configure commit message segments",
+      "description": "all | pin | configure default commit message segments",
       "matchUpdateTypes": [
         "pin",
         "pinDigest"
-      ]
+      ],
+      "semanticCommitType": "chore"
     }
   ],
   "semanticCommits": "enabled",

@@ -22,13 +22,6 @@
         "major"
       ],
       "minimumReleaseAge": "30 days"
-    },
-    {
-      "description": "lockFileMaintenance | configure min release age",
-      "matchUpdateTypes": [
-        "lockFileMaintenance"
-      ],
-      "minimumReleaseAge": "30 days"
     }
   ]
 }

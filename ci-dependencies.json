@@ -5,7 +5,7 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "description": "github-actions-dependencies | configure grouping, labels and version separation",
+      "description": "github-actions-dependencies | configure grouping, labels, semantic commits and version separation",
       "groupName": "github-actions-dependencies",
       "matchFileNames": [
         ".github/workflows/**"
@@ -13,6 +13,7 @@
       "matchManagers": [
         "custom.regex"
       ],
+      "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,

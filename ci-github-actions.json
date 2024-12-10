@@ -5,11 +5,13 @@
       "addLabels": [
         "dependency-type:github-actions"
       ],
-      "description": "github-actions | configure grouping, labels and version separation",
+      "description": "github-actions | configure grouping, labels, semantic commits and version separation",
       "groupName": "github-actions-versions-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchManagers": [
         "github-actions"
       ],
+      "semanticCommitScope": "github-actions",
+      "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": false,
