@@ -5,6 +5,6 @@
     "@commitlint/ensure": "19.5.0",
     "@commitlint/load": "19.5.0",
     "commitlint-plugin-function-rules": "4.0.1",
-    "renovate": "39.9.1"
+    "renovate": "39.57.1"
   }
 }
