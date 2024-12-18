@@ -10,12 +10,16 @@
       "matchManagers": [
         "github-actions"
       ],
+      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "github-actions",
       "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": false,
-      "separateMultipleMinor": false
+      "separateMultipleMinor": false,
+      "schedule": [
+        "every 30 day"
+      ]
     }
   ]
 }
