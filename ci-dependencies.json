@@ -13,11 +13,15 @@
       "matchManagers": [
         "custom.regex"
       ],
+      "minimumReleaseAge": "7 days",
       "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
-      "separateMultipleMinor": false
+      "separateMultipleMinor": false,
+      "schedule": [
+        "every 30 day"
+      ]
     }
   ]
 }

@@ -12,12 +12,16 @@
       "matchFileNames": [
         ".node-version"
       ],
+      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
-      "separateMultipleMinor": false
+      "separateMultipleMinor": false,
+      "schedule": [
+        "every 30 day"
+      ]
     },
     {
       "addLabels": [
@@ -34,12 +38,16 @@
         "npm",
         "poetry"
       ],
+      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
-      "separateMultipleMinor": false
+      "separateMultipleMinor": false,
+      "schedule": [
+        "every 30 day"
+      ]
     },
     {
       "addLabels": [
@@ -50,12 +58,16 @@
       "matchManagers": [
         "pre-commit"
       ],
+      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
-      "separateMultipleMinor": false
+      "separateMultipleMinor": false,
+      "schedule": [
+        "every 30 day"
+      ]
     },
     {
       "addLabels": [
