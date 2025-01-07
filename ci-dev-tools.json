@@ -20,7 +20,7 @@
       "separateMultipleMajor": true,
       "separateMultipleMinor": false,
       "schedule": [
-        "every 30 day"
+        "every 14 day"
       ]
     },
     {
@@ -46,7 +46,27 @@
       "separateMultipleMajor": true,
       "separateMultipleMinor": false,
       "schedule": [
-        "every 30 day"
+        "every 14 day"
+      ]
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "dev-tools(mise) | configure grouping, labels, semantic commits and version separation",
+      "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
+      "matchManagers": [
+        "mise"
+      ],
+      "minimumReleaseAge": "7 days",
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
+      "separateMajorMinor": true,
+      "separateMinorPatch": false,
+      "separateMultipleMajor": true,
+      "separateMultipleMinor": false,
+      "schedule": [
+        "every 14 day"
       ]
     },
     {
@@ -66,7 +86,7 @@
       "separateMultipleMajor": true,
       "separateMultipleMinor": false,
       "schedule": [
-        "every 30 day"
+        "every 14 day"
       ]
     },
     {
@@ -88,7 +108,7 @@
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
       "schedule": [
-        "every 30 day"
+        "every 14 day"
       ]
     },
     {
