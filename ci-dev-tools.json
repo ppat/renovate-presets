@@ -112,7 +112,10 @@
       ]
     },
     {
+      "automerge": true,
+      "automergeType": "pr",
       "fetchChangeLogs": "off",
+      "groupName": "renovate-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchDatasources": [
         "docker",
         "github-releases",
@@ -128,6 +131,9 @@
         "minor",
         "patch"
       ],
+      "minimumReleaseAge": "1 days",
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
       "schedule": [
         "every 7 day"
       ]
