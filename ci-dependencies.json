@@ -14,13 +14,14 @@
         "custom.regex"
       ],
       "minimumReleaseAge": "7 days",
+      "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": true,
       "separateMultipleMinor": false,
       "schedule": [
-        "every 30 day"
+        "every 14 day"
       ]
     }
   ]
