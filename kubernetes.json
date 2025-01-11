@@ -1,0 +1,68 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "addLabels": [
+        "automerge:off",
+        "dependency-type:kubernetes-api"
+      ],
+      "automerge": false,
+      "commitBody": "BREAKING CHANGE",
+      "commitMessagePrefix": "feat(kubernetes-api)!:",
+      "description": "update kubernetes-api versions",
+      "groupName": "kubernetes-api-{{packageName}}",
+      "matchDatasources": [
+        "kubernetes-api"
+      ],
+      "minimumReleaseAge": "60 days",
+      "reviewers": [
+        "ppat"
+      ],
+      "semanticCommits": "disabled"
+    },
+    {
+      "description": "configure version separation for kubernetes and flux versions",
+      "matchPackageNames": [
+        "fluxcd/flux2",
+        "kindest/node",
+        "kubernetes/kubectl",
+        "kubernetes/kubernetes"
+      ],
+      "separateMajorMinor": true,
+      "separateMinorPatch": true,
+      "separateMultipleMajor": true,
+      "separateMultipleMinor": true
+    },
+    {
+      "automerge": false,
+      "addLabels": [
+        "automerge:off"
+      ],
+      "description": "configure minor + major updates for kubernetes and flux versions",
+      "matchPackageNames": [
+        "fluxcd/flux2",
+        "kindest/node",
+        "kubernetes/kubectl",
+        "kubernetes/kubernetes"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "minimumReleaseAge": "60 days",
+      "reviewers": [
+        "ppat"
+      ]
+    },
+    {
+      "commitMessageTopic": "kubernetes version",
+      "description": "group kubernetes updates by version",
+      "matchPackageNames": [
+        "kindest/node",
+        "kubernetes/kubectl",
+        "kubernetes/kubernetes"
+      ],
+      "groupName": "k8s-version-{{newVersion}}"
+    }
+  ]
+}

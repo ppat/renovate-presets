@@ -1,0 +1,99 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "addLabels": [
+        "automerge:off"
+      ],
+      "automerge": false,
+      "commitBody": "BREAKING CHANGE",
+      "commitMessageAction": "update",
+      "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
+      "commitMessageTopic": "{{depName}}",
+      "description": "defaults for breaking changes",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "minimumReleaseAge": "30 days",
+      "reviewers": [
+        "ppat"
+      ],
+      "semanticCommitType": "feat"
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "commitMessageAction": "update",
+      "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
+      "commitMessageTopic": "{{depName}}",
+      "description": "defaults for minor updates (non-breaking new features)",
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "minimumReleaseAge": "7 days",
+      "semanticCommitType": "feat",
+      "platformAutomerge": true
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "commitMessageAction": "update",
+      "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
+      "commitMessageTopic": "{{depName}}",
+      "description": "defaults for patch updates (bug fixes)",
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "semanticCommitType": "fix",
+      "platformAutomerge": true
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "commitMessageAction": "update digest",
+      "commitMessageExtra": "({{currentDigestShort}} -> {{newDigestShort}})",
+      "commitMessageTopic": "{{depName}}",
+      "description": "defaults for digest updates",
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "semanticCommitType": "fix",
+      "platformAutomerge": true
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "commitMessageAction": "pin",
+      "commitMessageExtra": "",
+      "commitMessageTopic": "{{depName}}",
+      "description": "defaults for pin updates",
+      "matchUpdateTypes": [
+        "pin",
+        "pinDigest"
+      ],
+      "semanticCommitType": "chore",
+      "platformAutomerge": true
+    },
+    {
+      "automerge": true,
+      "automergeType": "pr",
+      "commitMessageAction": "update lockfile",
+      "commitMessageExtra": "",
+      "commitMessageTopic": "{{manager}}",
+      "description": "defaults for lockfile updates",
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "semanticCommitType": "chore",
+      "platformAutomerge": true
+    }
+  ],
+  "minimumReleaseAge": "1 days",
+  "semanticCommits": "enabled",
+  "semanticCommitScope": "",
+  "semanticCommitType": "chore",
+  "separateMajorMinor": true,
+  "separateMinorPatch": false,
+  "separateMultipleMajor": false,
+  "separateMultipleMinor": false
+}
