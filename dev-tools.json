@@ -74,8 +74,6 @@
       ]
     },
     {
-      "automerge": true,
-      "automergeType": "pr",
       "description": "update renovate itself",
       "fetchChangeLogs": "off",
       "groupName": "renovate-{{#if isMajor}}major{{else}}non-major{{/if}}",
