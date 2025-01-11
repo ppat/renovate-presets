@@ -8,26 +8,7 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "description": "matchFileNames=[.node-version] | configure labels, semantic commits and version separation",
-      "matchFileNames": [
-        ".node-version"
-      ],
-      "minimumReleaseAge": "7 days",
-      "semanticCommitScope": "dev-tools",
-      "semanticCommitType": "chore",
-      "separateMajorMinor": true,
-      "separateMinorPatch": false,
-      "separateMultipleMajor": true,
-      "separateMultipleMinor": false,
-      "schedule": [
-        "every 14 day"
-      ]
-    },
-    {
-      "addLabels": [
-        "dependency-type:dev-tools"
-      ],
-      "description": "dev-tools(npm/poetry) | configure grouping, labels, semantic commits and version separation",
+      "description": "update npm/poetry dev dependencies",
       "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchDepTypes": [
         "devDependencies",
@@ -38,13 +19,8 @@
         "npm",
         "poetry"
       ],
-      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
-      "separateMajorMinor": true,
-      "separateMinorPatch": false,
-      "separateMultipleMajor": true,
-      "separateMultipleMinor": false,
       "schedule": [
         "every 14 day"
       ]
@@ -53,18 +29,16 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "description": "dev-tools(mise) | configure grouping, labels, semantic commits and version separation",
+      "description": "update mise dependencies (only within mise.toml files at repository root)",
       "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
+      "matchFileNames": [
+        "mise.toml"
+      ],
       "matchManagers": [
         "mise"
       ],
-      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
-      "separateMajorMinor": true,
-      "separateMinorPatch": false,
-      "separateMultipleMajor": true,
-      "separateMultipleMinor": false,
       "schedule": [
         "every 14 day"
       ]
@@ -73,38 +47,26 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "description": "dev-tools(pre-commit) | configure grouping, labels, semantic commits and version separation",
+      "description": "update pre-commit dependencies",
       "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchManagers": [
         "pre-commit"
       ],
-      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
-      "separateMajorMinor": true,
-      "separateMinorPatch": false,
-      "separateMultipleMajor": true,
-      "separateMultipleMinor": false,
       "schedule": [
         "every 14 day"
       ]
     },
     {
       "addLabels": [
-        "dependency-type:lockfile"
+        "dependency-type:dev-tools"
       ],
-      "commitMessageAction": "update lockfile",
-      "commitMessageTopic": "{{manager}}",
-      "description": "dev-tools(npm/poetry) | configure grouping, labels, semantic commits and version separation",
+      "description": "update lockfiles",
       "groupName": "dev-tools-{{manager}}-lockfile",
-      "matchManagers": [
-        "npm",
-        "poetry"
-      ],
       "matchUpdateTypes": [
         "lockFileMaintenance"
       ],
-      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
       "schedule": [
@@ -114,6 +76,7 @@
     {
       "automerge": true,
       "automergeType": "pr",
+      "description": "update renovate itself",
       "fetchChangeLogs": "off",
       "groupName": "renovate-{{#if isMajor}}major{{else}}non-major{{/if}}",
       "matchDatasources": [
@@ -126,12 +89,6 @@
         "renovate/renovate",
         "renovatebot/renovate"
       ],
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
-      "minimumReleaseAge": "1 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
       "schedule": [

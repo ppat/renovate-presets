@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "addLabels": [
+        "dependency-type:github-actions"
+      ],
+      "description": "update github-action versions",
+      "groupName": "gha-versions-{{#if isMajor}}major{{else}}non-major{{/if}}",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "semanticCommitScope": "github-actions",
+      "semanticCommitType": "chore",
+      "schedule": [
+        "every 14 day"
+      ]
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "update github-action dependencies",
+      "matchFileNames": [
+        ".github/workflows/**"
+      ],
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
+      "schedule": [
+        "every 14 day"
+      ]
+    }
+  ]
+}
