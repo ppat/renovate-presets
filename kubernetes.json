@@ -28,6 +28,7 @@
         "kubernetes/kubectl",
         "kubernetes/kubernetes"
       ],
+      "semanticCommitScope": "{{#if (equals (lookup (split packageFileDir '/') 0) 'github')}}dev-tools{{else}}cli-tools{{/if}}",
       "separateMajorMinor": true,
       "separateMinorPatch": true,
       "separateMultipleMajor": true,
@@ -55,14 +56,13 @@
       ]
     },
     {
-      "commitMessageTopic": "kubernetes version",
       "description": "group kubernetes updates by version",
       "matchPackageNames": [
         "kindest/node",
         "kubernetes/kubectl",
         "kubernetes/kubernetes"
       ],
-      "groupName": "k8s-version-{{newVersion}}"
+      "groupName": "kubernetes"
     }
   ]
 }
