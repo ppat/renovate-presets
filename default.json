@@ -21,8 +21,6 @@
       "semanticCommitType": "feat"
     },
     {
-      "automerge": true,
-      "automergeType": "pr",
       "commitMessageAction": "update",
       "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
       "commitMessageTopic": "{{depName}}",
@@ -31,12 +29,9 @@
         "minor"
       ],
       "minimumReleaseAge": "7 days",
-      "semanticCommitType": "feat",
-      "platformAutomerge": true
+      "semanticCommitType": "feat"
     },
     {
-      "automerge": true,
-      "automergeType": "pr",
       "commitMessageAction": "update",
       "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
       "commitMessageTopic": "{{depName}}",
@@ -44,12 +39,9 @@
       "matchUpdateTypes": [
         "patch"
       ],
-      "semanticCommitType": "fix",
-      "platformAutomerge": true
+      "semanticCommitType": "fix"
     },
     {
-      "automerge": true,
-      "automergeType": "pr",
       "commitMessageAction": "update digest",
       "commitMessageExtra": "({{currentDigestShort}} -> {{newDigestShort}})",
       "commitMessageTopic": "{{depName}}",
@@ -57,12 +49,9 @@
       "matchUpdateTypes": [
         "digest"
       ],
-      "semanticCommitType": "fix",
-      "platformAutomerge": true
+      "semanticCommitType": "fix"
     },
     {
-      "automerge": true,
-      "automergeType": "pr",
       "commitMessageAction": "pin",
       "commitMessageExtra": "",
       "commitMessageTopic": "{{depName}}",
@@ -71,12 +60,9 @@
         "pin",
         "pinDigest"
       ],
-      "semanticCommitType": "chore",
-      "platformAutomerge": true
+      "semanticCommitType": "chore"
     },
     {
-      "automerge": true,
-      "automergeType": "pr",
       "commitMessageAction": "update lockfile",
       "commitMessageExtra": "",
       "commitMessageTopic": "{{manager}}",
@@ -84,14 +70,16 @@
       "matchUpdateTypes": [
         "lockFileMaintenance"
       ],
-      "semanticCommitType": "chore",
-      "platformAutomerge": true
+      "semanticCommitType": "chore"
     }
   ],
+  "automerge": true,
+  "automergeType": "pr",
   "minimumReleaseAge": "1 days",
   "semanticCommits": "enabled",
   "semanticCommitScope": "",
   "semanticCommitType": "chore",
+  "platformAutomerge": true,
   "separateMajorMinor": true,
   "separateMinorPatch": false,
   "separateMultipleMajor": false,
