@@ -39,7 +39,7 @@
       "addLabels": [
         "automerge:off"
       ],
-      "description": "configure minor + major updates for kubernetes and flux versions",
+      "description": "disable automerge for major/minor updates of kubernetes and flux versions",
       "matchPackageNames": [
         "fluxcd/flux2",
         "kindest/node",
@@ -50,10 +50,33 @@
         "major",
         "minor"
       ],
-      "minimumReleaseAge": "60 days",
       "reviewers": [
         "ppat"
       ]
+    },
+    {
+      "description": "override release age for major/minor updates of flux versions",
+      "matchPackageNames": [
+        "fluxcd/flux2"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "minimumReleaseAge": "30 days"
+    },
+    {
+      "description": "override release age for major/minor updates of kubernetes versions",
+      "matchPackageNames": [
+        "kindest/node",
+        "kubernetes/kubectl",
+        "kubernetes/kubernetes"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "minimumReleaseAge": "90 days"
     },
     {
       "description": "group kubernetes updates by version",

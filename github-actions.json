@@ -5,7 +5,7 @@
       "addLabels": [
         "dependency-type:github-actions"
       ],
-      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
+      "commitMessageExtra": "{{#if isMajor}}(major){{else if (or isMinor isPatch)}}(non-major){{else}}{{/if}})",
       "description": "update github-action versions",
       "groupName": "github action versions",
       "matchManagers": [
