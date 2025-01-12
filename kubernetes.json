@@ -28,7 +28,7 @@
         "kubernetes/kubectl",
         "kubernetes/kubernetes"
       ],
-      "semanticCommitScope": "{{#if (equals (lookup (split packageFileDir '/') 0) 'github')}}dev-tools{{else}}cli-tools{{/if}}",
+      "semanticCommitScope": "{{#if (equals (lookup (split packageFileDir '/') 0) '.github')}}dev-tools{{else}}cli-tools{{/if}}",
       "separateMajorMinor": true,
       "separateMinorPatch": true,
       "separateMultipleMajor": true,
