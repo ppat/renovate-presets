@@ -76,7 +76,7 @@
         "major",
         "minor"
       ],
-      "minimumReleaseAge": "90 days"
+      "minimumReleaseAge": "60 days"
     },
     {
       "description": "group kubernetes updates by version",
