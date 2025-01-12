@@ -5,8 +5,9 @@
       "addLabels": [
         "dependency-type:github-actions"
       ],
+      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
       "description": "update github-action versions",
-      "groupName": "gha-versions-{{#if isMajor}}major{{else}}non-major{{/if}}",
+      "groupName": "github action versions",
       "matchManagers": [
         "github-actions"
       ],

@@ -8,8 +8,9 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
+      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
       "description": "update npm/poetry dev dependencies",
-      "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
+      "groupName": "{{manager}} packages",
       "matchDepTypes": [
         "devDependencies",
         "dev-dependencies",
@@ -29,8 +30,9 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
+      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
       "description": "update mise dependencies (only within mise.toml files at repository root)",
-      "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
+      "groupName": "{{manager}} packages",
       "matchFileNames": [
         "mise.toml"
       ],
@@ -47,8 +49,9 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
+      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
       "description": "update pre-commit dependencies",
-      "groupName": "dev-tools-{{manager}}-{{#if isMajor}}major{{else}}non-major{{/if}}",
+      "groupName": "{{manager}} packages",
       "matchManagers": [
         "pre-commit"
       ],
@@ -63,7 +66,7 @@
         "dependency-type:dev-tools"
       ],
       "description": "update lockfiles",
-      "groupName": "dev-tools-{{manager}}-lockfile",
+      "groupName": "{{manager}} lockfile",
       "matchUpdateTypes": [
         "lockFileMaintenance"
       ],
@@ -76,7 +79,7 @@
     {
       "description": "update renovate itself",
       "fetchChangeLogs": "off",
-      "groupName": "renovate-{{#if isMajor}}major{{else}}non-major{{/if}}",
+      "groupName": "renovate",
       "matchDatasources": [
         "docker",
         "github-releases",

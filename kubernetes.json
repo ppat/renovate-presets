@@ -10,7 +10,7 @@
       "commitBody": "BREAKING CHANGE",
       "commitMessagePrefix": "feat(kubernetes-api)!:",
       "description": "update kubernetes-api versions",
-      "groupName": "kubernetes-api-{{packageName}}",
+      "groupName": "kubernetes-api: {{packageName}}",
       "matchDatasources": [
         "kubernetes-api"
       ],
