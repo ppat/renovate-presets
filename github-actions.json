@@ -3,8 +3,10 @@
   "packageRules": [
     {
       "addLabels": [
+        "automerge:off",
         "dependency-type:github-actions"
       ],
+      "automerge": false,
       "commitMessageExtra": "{{#if isMajor}}(major){{else if (or isMinor isPatch)}}(non-major){{else}}{{/if}}",
       "description": "update github-action versions",
       "groupName": "github action versions",
