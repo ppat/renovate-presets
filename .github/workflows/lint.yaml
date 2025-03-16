@@ -40,8 +40,6 @@ jobs:
           renovate:
           - .github/renovate.json
           - '*.json'
-          - '!package.json'
-          - '!package-lock.json'
 
   commit-messages:
     if: ${{ github.event_name == 'pull_request' }}
