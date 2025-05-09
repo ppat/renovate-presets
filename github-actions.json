@@ -13,7 +13,9 @@
       ],
       "matchPackageNames": [
         "/^actions\//",
+        "/^aquasecurity\//",
         "/^docker\//",
+        "/^github\//",
         "/^renovatebot\//",
         "/^tailscale\//"
       ],
