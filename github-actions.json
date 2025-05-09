@@ -3,16 +3,43 @@
   "packageRules": [
     {
       "addLabels": [
+        "dependency-type:github-actions"
+      ],
+      "automerge": true,
+      "description": "update non-major versions of trusted github-actions automatically",
+      "groupName": "trusted github actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "/^actions\//",
+        "/^docker\//",
+        "/^renovatebot\//",
+        "/^tailscale\//"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "minor",
+        "patch"
+      ],
+      "minimumReleaseAge": "3 days",
+      "semanticCommitScope": "github-actions",
+      "semanticCommitType": "chore",
+      "schedule": [
+        "every 14 day"
+      ]
+    },
+    {
+      "addLabels": [
         "automerge:off",
         "dependency-type:github-actions"
       ],
       "automerge": false,
-      "commitMessageExtra": "{{#if isMajor}}(major){{else if (or isMinor isPatch)}}(non-major){{else}}{{/if}}",
-      "description": "update github-action versions",
-      "groupName": "github action versions",
+      "description": "update major versions of trusted actions or all versions of non-trusted github-actions",
       "matchManagers": [
         "github-actions"
       ],
+      "minimumReleaseAge": "30 days",
       "semanticCommitScope": "github-actions",
       "semanticCommitType": "chore",
       "schedule": [
