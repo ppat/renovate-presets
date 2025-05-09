@@ -15,7 +15,9 @@
         "/^actions\//",
         "/^aquasecurity\//",
         "/^docker\//",
+        "/^fluxcd\//",
         "/^github\//",
+        "/^googleapis\//",
         "/^renovatebot\//",
         "/^tailscale\//"
       ],
