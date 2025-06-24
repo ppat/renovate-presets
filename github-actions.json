@@ -5,9 +5,20 @@
       "addLabels": [
         "dependency-type:github-actions"
       ],
+      "description": "github-actions common settings",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "semanticCommitScope": "github-actions",
+      "semanticCommitType": "chore",
+      "schedule": [
+        "every 14 day"
+      ]
+    },
+    {
       "automerge": true,
-      "description": "update non-major versions of trusted github-actions automatically",
-      "groupName": "trusted github actions",
+      "description": "auto merge non-major versions of trusted github-actions after 3 days",
+      "groupName": "github-actions-trusted",
       "matchManagers": [
         "github-actions"
       ],
@@ -18,7 +29,6 @@
         "/^fluxcd\//",
         "/^github\//",
         "/^googleapis\//",
-        "/^renovatebot\//",
         "/^tailscale\//"
       ],
       "matchUpdateTypes": [
@@ -26,12 +36,7 @@
         "minor",
         "patch"
       ],
-      "minimumReleaseAge": "3 days",
-      "semanticCommitScope": "github-actions",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 14 day"
-      ]
+      "minimumReleaseAge": "3 days"
     },
     {
       "addLabels": [
@@ -39,22 +44,51 @@
         "dependency-type:github-actions"
       ],
       "automerge": false,
-      "description": "update major versions of trusted actions or all versions of non-trusted github-actions",
+      "description": "manual merge major versions of trusted github-actions after 30 days",
       "matchManagers": [
         "github-actions"
       ],
-      "minimumReleaseAge": "30 days",
-      "semanticCommitScope": "github-actions",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 14 day"
-      ]
+      "matchPackageNames": [
+        "/^actions\//",
+        "/^aquasecurity\//",
+        "/^docker\//",
+        "/^fluxcd\//",
+        "/^github\//",
+        "/^googleapis\//",
+        "/^tailscale\//"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "minimumReleaseAge": "30 days"
+    },
+    {
+      "addLabels": [
+        "automerge:off",
+        "dependency-type:github-actions"
+      ],
+      "automerge": false,
+      "description": "manually merge non-trusted github-actions after 30 days",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "!/^actions\//",
+        "!/^aquasecurity\//",
+        "!/^docker\//",
+        "!/^fluxcd\//",
+        "!/^github\//",
+        "!/^googleapis\//",
+        "!/^tailscale\//"
+      ],
+      "minimumReleaseAge": "30 days"
     },
     {
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "description": "update github-action dependencies",
+      "description": "update regex dependencies of github-actions",
+      "groupName": "github-actions-dep-{{packageName}}",
       "matchFileNames": [
         ".github/workflows/**"
       ],
@@ -62,10 +96,7 @@
         "custom.regex"
       ],
       "semanticCommitScope": "dev-tools",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 14 day"
-      ]
+      "semanticCommitType": "chore"
     }
   ]
 }
