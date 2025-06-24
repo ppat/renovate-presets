@@ -18,7 +18,7 @@
     {
       "automerge": true,
       "description": "auto merge non-major versions of trusted github-actions after 3 days",
-      "groupName": "github-actions-trusted",
+      "groupName": "trusted github-actions",
       "matchManagers": [
         "github-actions"
       ],
@@ -88,7 +88,7 @@
         "dependency-type:dev-tools"
       ],
       "description": "update regex dependencies of github-actions",
-      "groupName": "github-actions-dep-{{packageName}}",
+      "groupName": "{{packageName}} (github-actions dependency)",
       "matchFileNames": [
         ".github/workflows/**"
       ],
