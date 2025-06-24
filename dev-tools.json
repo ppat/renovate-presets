@@ -34,7 +34,8 @@
       "description": "update mise dependencies (only within mise.toml files at repository root)",
       "groupName": "{{manager}} packages",
       "matchFileNames": [
-        "mise.toml"
+        "mise.toml",
+        ".mise.toml"
       ],
       "matchManagers": [
         "mise"
