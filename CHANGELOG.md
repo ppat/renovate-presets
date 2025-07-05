@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/ppat/renovate-presets/compare/v0.0.1...v0.0.2) (2025-07-05)
+
+
+### 🚀 Enhancements + Bug Fixes
+
+* **renovate-presets:** enable pinning digests in github-actions preset ([d099d9c](https://github.com/ppat/renovate-presets/commit/d099d9ca6f85cbeff0cbe0d9757f65d12e0d7ee9))
+
 ## 0.0.1 (2025-07-05)
 
 
