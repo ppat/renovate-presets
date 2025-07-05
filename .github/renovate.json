@@ -18,7 +18,8 @@
     "mergeConfidence:all-badges",
     "github>ppat/renovate-presets",
     "github>ppat/renovate-presets:dev-tools",
-    "github>ppat/renovate-presets:github-actions"
+    "github>ppat/renovate-presets:github-actions",
+    "github>ppat/renovate-presets:kubernetes"
   ],
   "internalChecksFilter": "strict",
   "labels": [
