@@ -9,6 +9,7 @@
       "matchManagers": [
         "github-actions"
       ],
+      "pinDigests": true,
       "semanticCommitScope": "github-actions",
       "semanticCommitType": "chore",
       "schedule": [
