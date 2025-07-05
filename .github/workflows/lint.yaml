@@ -47,6 +47,8 @@ jobs:
           renovate:
           - .github/renovate.json
           - '*.json'
+          - '!.release-please-manifest.json'
+          - '!release-please-config.json'
 
   commit-messages:
     if: ${{ github.event_name == 'pull_request' }}
