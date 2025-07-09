@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.3](https://github.com/ppat/renovate-presets/compare/v0.0.2...v0.0.3) (2025-07-09)
+
+
+### Miscellaneous
+
+* **github-actions:** update ppat/github-workflows (v0.1.0 -&gt; v0.1.1) ([#98](https://github.com/ppat/renovate-presets/issues/98)) ([b45d437](https://github.com/ppat/renovate-presets/commit/b45d437903473751509934c2d65c1c2ea0118172))
+* **github-actions:** update renovatebot/github-action (v42.0.1 -&gt; v42.0.4) ([#93](https://github.com/ppat/renovate-presets/issues/93)) ([ea579da](https://github.com/ppat/renovate-presets/commit/ea579da6ad1f0605b5408924ecfdae16a01f2bbb))
+
 ## [0.0.2](https://github.com/ppat/renovate-presets/compare/v0.0.1...v0.0.2) (2025-07-05)
 
 
