@@ -15,9 +15,6 @@
         "kubernetes-api"
       ],
       "minimumReleaseAge": "60 days",
-      "reviewers": [
-        "ppat"
-      ],
       "semanticCommits": "disabled"
     },
     {
@@ -29,7 +26,7 @@
         "kubernetes/kubernetes"
       ],
       "separateMajorMinor": true,
-      "separateMinorPatch": true,
+      "separateMinorPatch": false,
       "separateMultipleMajor": true,
       "separateMultipleMinor": true
     },
@@ -48,9 +45,6 @@
       "matchUpdateTypes": [
         "major",
         "minor"
-      ],
-      "reviewers": [
-        "ppat"
       ]
     },
     {
