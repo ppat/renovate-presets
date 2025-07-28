@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.0.3](https://github.com/ppat/renovate-presets/compare/v0.0.2...v0.0.3) (2025-07-28)
+
+
+### Miscellaneous
+
+* **dev-tools:** add markdown lint config ([#101](https://github.com/ppat/renovate-presets/issues/101)) ([44779e4](https://github.com/ppat/renovate-presets/commit/44779e453922ef963fe2b62667439f2029cb696d))
+* **dev-tools:** update sirosen/texthooks (non-major) ([#103](https://github.com/ppat/renovate-presets/issues/103)) ([535c9d7](https://github.com/ppat/renovate-presets/commit/535c9d71bc51806931949f81c141bbecc42a9074))
+* **github-actions:** update ppat/github-workflows (v0.1.0 -&gt; v0.1.1) ([#98](https://github.com/ppat/renovate-presets/issues/98)) ([b45d437](https://github.com/ppat/renovate-presets/commit/b45d437903473751509934c2d65c1c2ea0118172))
+* **github-actions:** update ppat/github-workflows (v0.1.1 -&gt; v1.0.0) ([#102](https://github.com/ppat/renovate-presets/issues/102)) ([d0293f1](https://github.com/ppat/renovate-presets/commit/d0293f1bb9fbf33a84d1762829af05dd72f6f50e))
+* **github-actions:** update renovatebot/github-action (v42.0.1 -&gt; v42.0.4) ([#93](https://github.com/ppat/renovate-presets/issues/93)) ([ea579da](https://github.com/ppat/renovate-presets/commit/ea579da6ad1f0605b5408924ecfdae16a01f2bbb))
+
+
+### 🚀 Enhancements + Bug Fixes
+
+* **renovate-presets:** do not tag reviewer and do not separate minor/patch for kubernetes ([#100](https://github.com/ppat/renovate-presets/issues/100)) ([253bef3](https://github.com/ppat/renovate-presets/commit/253bef3a23e8a18f76191ec18f52763895fc51f2))
+
 ## [0.0.2](https://github.com/ppat/renovate-presets/compare/v0.0.1...v0.0.2) (2025-07-05)
 
 
