@@ -4,7 +4,7 @@
     {
       "customType": "regex",
       "managerFilePatterns": [
-        "(^|/).+\\.ya?ml$"
+        "/(^|/).+\\.ya?ml$/"
       ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-.]+?)\\s+depName=(?<depName>[a-zA-Z0-9-/]+?)(\\s+repository=(?<registryUrl>[^\\s]+?))?(\\s+versioning=(?<versioning>[^\\s]+?))?(\\s+extractVersion=(?<extractVersion>[^\\s]+?))?\\s*\\n.+[\\:\\=]\\s?\"v?(?<currentValue>[^\\s]+)\""
@@ -12,9 +12,14 @@
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ],
+  "configMigration": true,
+  "dependencyDashboard": true,
   "extends": [
-    "config:best-practices",
-    "group:linters",
+    ":ignoreModulesAndTests",
+    "abandonments:recommended",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    "mergeConfidence:age-confidence-badges",
     "mergeConfidence:all-badges",
     "github>ppat/renovate-presets",
     "github>ppat/renovate-presets:dev-tools",
@@ -27,6 +32,11 @@
   ],
   "prConcurrentLimit": 30,
   "prHourlyLimit": 0,
+  "printConfig": true,
   "rebaseWhen": "behind-base-branch",
+  "suppressNotifications": [
+    "prEditedNotification",
+    "prIgnoreNotification"
+  ],
   "timezone": "US/Eastern"
 }
