@@ -31,6 +31,27 @@
         "dependency-type:dev-tools"
       ],
       "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
+      "description": "update pep621 dependencies",
+      "groupName": "{{manager}}-{{depType}}",
+      "matchDepTypes": [
+        "build-system.requires",
+        "dependency-groups",
+        "tool.uv.dev-dependencies"
+      ],
+      "matchManagers": [
+        "pep621"
+      ],
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
+      "schedule": [
+        "every 14 day"
+      ]
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
       "description": "update mise dependencies (only within mise.toml files at repository root)",
       "groupName": "{{manager}} packages",
       "matchFileNames": [
@@ -87,10 +108,12 @@
         "npm"
       ],
       "matchPackageNames": [
+        "npm:renovate",
         "renovate",
         "renovate/renovate",
         "renovatebot/renovate"
       ],
+      "minimumReleaseAge": "3 days",
       "semanticCommitScope": "dev-tools",
       "semanticCommitType": "chore",
       "schedule": [
