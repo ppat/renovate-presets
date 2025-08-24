@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.4](https://github.com/ppat/renovate-presets/compare/v0.0.3...v0.0.4) (2025-08-24)
+
+
+### Miscellaneous
+
+* **github-actions:** update ppat/github-workflows (v2.0.0 -&gt; v2.0.1) ([#107](https://github.com/ppat/renovate-presets/issues/107)) ([2576d50](https://github.com/ppat/renovate-presets/commit/2576d504c25cc435730c1ddb219d0db27001fb44))
+
+
+### ✨ Features
+
+* renovate should update ppat github actions w/ out enforcing minimum release age ([#105](https://github.com/ppat/renovate-presets/issues/105)) ([59b7315](https://github.com/ppat/renovate-presets/commit/59b7315cb422d5aa0db19008c1729f8b3d140d0e))
+
 ## [0.0.3](https://github.com/ppat/renovate-presets/compare/v0.0.2...v0.0.3) (2025-07-28)
 
 
