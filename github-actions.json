@@ -85,6 +85,25 @@
       "minimumReleaseAge": "30 days"
     },
     {
+      "automerge": true,
+      "description": "update ppat github actions and reusable workflows",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "/^ppat\//"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "minor",
+        "patch"
+      ],
+      "minimumReleaseAge": "",
+      "schedule": [
+        "at any time"
+      ]
+    },
+    {
       "addLabels": [
         "dependency-type:dev-tools"
       ],
