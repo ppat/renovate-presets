@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/ppat/renovate-presets/compare/v0.0.4...v0.0.5) (2025-08-25)
+
+
+### Miscellaneous
+
+* **github-actions:** update ppat/github-workflows (v2.0.1 -&gt; v2.0.3) ([#108](https://github.com/ppat/renovate-presets/issues/108)) ([9cde770](https://github.com/ppat/renovate-presets/commit/9cde770b91e051bb2f9083f68bec3655ab09118e))
+
 ## [0.0.4](https://github.com/ppat/renovate-presets/compare/v0.0.3...v0.0.4) (2025-08-24)
 
 
