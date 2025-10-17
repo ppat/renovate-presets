@@ -68,6 +68,19 @@
       ]
     },
     {
+      "description": "update mise itself",
+      "groupName": "mise",
+      "matchPackageNames": [
+        "jdx/mise"
+      ],
+      "minimumReleaseAge": "3 days",
+      "semanticCommitScope": "dev-tools",
+      "semanticCommitType": "chore",
+      "schedule": [
+        "every 7 day"
+      ]
+    },
+    {
       "addLabels": [
         "dependency-type:dev-tools"
       ],
