@@ -17,8 +17,6 @@
   "initial-version": "0.0.1",
   "packages": {
     ".": {
-      "bump-minor-pre-major": true,
-      "bump-patch-for-minor-pre-major": true,
       "extra-label": "pr-type:release"
     }
   },
