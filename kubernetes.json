@@ -20,8 +20,10 @@
     {
       "description": "configure version separation for kubernetes and flux versions",
       "matchPackageNames": [
+        "flux2",
         "fluxcd/flux2",
         "kindest/node",
+        "kubectl",
         "kubernetes/kubectl",
         "kubernetes/kubernetes"
       ],
@@ -37,8 +39,10 @@
       ],
       "description": "disable automerge for major/minor updates of kubernetes and flux versions",
       "matchPackageNames": [
+        "flux2",
         "fluxcd/flux2",
         "kindest/node",
+        "kubectl",
         "kubernetes/kubectl",
         "kubernetes/kubernetes"
       ],
@@ -50,6 +54,7 @@
     {
       "description": "override release age for major/minor updates of flux versions",
       "matchPackageNames": [
+        "flux2",
         "fluxcd/flux2"
       ],
       "matchUpdateTypes": [
@@ -62,6 +67,7 @@
       "description": "override release age for major/minor updates of kubernetes versions",
       "matchPackageNames": [
         "kindest/node",
+        "kubectl",
         "kubernetes/kubectl",
         "kubernetes/kubernetes"
       ],
@@ -76,8 +82,17 @@
       "groupName": "kubernetes",
       "matchPackageNames": [
         "kindest/node",
+        "kubectl",
         "kubernetes/kubectl",
         "kubernetes/kubernetes"
+      ]
+    },
+    {
+      "description": "group flux updates by version",
+      "groupName": "flux",
+      "matchPackageNames": [
+        "flux2",
+        "fluxcd/flux2"
       ]
     }
   ]
