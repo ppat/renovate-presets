@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.0](https://github.com/ppat/renovate-presets/compare/v0.0.4...v0.1.0) (2025-10-17)
+
+
+### Miscellaneous
+
+* **dev-tools:** update alessandrojcm/commitlint-pre-commit-hook (non-major) ([#112](https://github.com/ppat/renovate-presets/issues/112)) ([4a58b8d](https://github.com/ppat/renovate-presets/commit/4a58b8d7159f41978e17be3d849f6ffc15812653))
+* **dev-tools:** update pre-commit/pre-commit-hooks (major) ([#110](https://github.com/ppat/renovate-presets/issues/110)) ([e827590](https://github.com/ppat/renovate-presets/commit/e827590f6f557898e0aaffb3fed327b6e9e79f5a))
+* **github-actions:** update ppat/github-workflows (v2.0.1 -&gt; v2.0.3) ([#108](https://github.com/ppat/renovate-presets/issues/108)) ([9cde770](https://github.com/ppat/renovate-presets/commit/9cde770b91e051bb2f9083f68bec3655ab09118e))
+* **github-actions:** update ppat/github-workflows (v2.0.3 -&gt; v2.1.1) ([#111](https://github.com/ppat/renovate-presets/issues/111)) ([e09b1b0](https://github.com/ppat/renovate-presets/commit/e09b1b06de7e5eb6b7cc82745915d585330a8127))
+* update release-please cfg ([27ea686](https://github.com/ppat/renovate-presets/commit/27ea6869dfe58186772b7da2878dc0be74858db6))
+
+
+### ✨ Features
+
+* update dev-tools preset to handle mise updates ([#113](https://github.com/ppat/renovate-presets/issues/113)) ([e1f3410](https://github.com/ppat/renovate-presets/commit/e1f34106dd915e851338b8fd77e0f53018a2276b))
+* update kubernetes preset to group flux updates ([#114](https://github.com/ppat/renovate-presets/issues/114)) ([2e97baf](https://github.com/ppat/renovate-presets/commit/2e97baf2803dcaa48dcf7e932a044b1d82982550))
+
 ## [0.0.4](https://github.com/ppat/renovate-presets/compare/v0.0.3...v0.0.4) (2025-08-24)
 
 
