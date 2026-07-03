@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/ppat/renovate-presets/compare/v0.2.0...v0.2.1) (2026-07-03)
+
+
+### 🚀 Enhancements + Bug Fixes
+
+* **renovate-presets:** explicitly set min release age to 0 days on self developed github actions/workflows ([#131](https://github.com/ppat/renovate-presets/issues/131)) ([7e6bba7](https://github.com/ppat/renovate-presets/commit/7e6bba76acc7f889eca82c29361dcc192d82b5b5))
+
 ## [0.2.0](https://github.com/ppat/renovate-presets/compare/v0.1.1...v0.2.0) (2026-07-03)
 
 
