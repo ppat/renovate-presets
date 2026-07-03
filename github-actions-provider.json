@@ -83,7 +83,7 @@
       "matchPackageNames": [
         "/^ppat\//"
       ],
-      "minimumReleaseAge": "",
+      "minimumReleaseAge": "0 days",
       "schedule": [
         "at any time"
       ]
