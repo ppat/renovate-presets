@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.0](https://github.com/ppat/renovate-presets/compare/v0.1.1...v0.2.0) (2026-07-03)
+
+
+### Miscellaneous
+
+* **dev-tools:** update alessandrojcm/commitlint-pre-commit-hook (non-major) ([#127](https://github.com/ppat/renovate-presets/issues/127)) ([06302ce](https://github.com/ppat/renovate-presets/commit/06302ce0dd80b1f9226ee2fe0484edeedcf190ba))
+* **dev-tools:** update davidanson/markdownlint-cli2 (non-major) ([#124](https://github.com/ppat/renovate-presets/issues/124)) ([a493014](https://github.com/ppat/renovate-presets/commit/a4930142259467b74819492c642b17ee231b03d8))
+* **dev-tools:** update davidanson/markdownlint-cli2 (non-major) ([#126](https://github.com/ppat/renovate-presets/issues/126)) ([6f709ab](https://github.com/ppat/renovate-presets/commit/6f709aba32dc58f394836518ea6f9561d510dd25))
+* **github-actions:** update ppat/github-workflows (v3.2.0 -&gt; v3.3.0) ([#128](https://github.com/ppat/renovate-presets/issues/128)) ([91b9a8e](https://github.com/ppat/renovate-presets/commit/91b9a8e9ca0d564dedaf4f65565ac5e2eab94a55))
+* **github-actions:** update ppat/github-workflows (v3.3.0 -&gt; v3.3.1) ([#129](https://github.com/ppat/renovate-presets/issues/129)) ([b917a11](https://github.com/ppat/renovate-presets/commit/b917a11ca3ab9a9813f5d7b65dbf696efa3c6e6e))
+
+
+### ✨ Features
+
+* **renovate-presets:** distinguish between github-actions preset for github-actions provider & github-actions users ([#130](https://github.com/ppat/renovate-presets/issues/130)) ([5894845](https://github.com/ppat/renovate-presets/commit/5894845bdbec9ef2ab0b9abd1c22c12816cecb9d))
+
 ## [0.1.1](https://github.com/ppat/renovate-presets/compare/v0.1.0...v0.1.1) (2026-03-16)
 
 
