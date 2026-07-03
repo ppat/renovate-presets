@@ -10,11 +10,7 @@
         "github-actions"
       ],
       "pinDigests": true,
-      "semanticCommitScope": "github-actions",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 14 day"
-      ]
+      "semanticCommitScope": "github-actions"
     },
     {
       "automerge": true,
@@ -104,8 +100,7 @@
       "matchManagers": [
         "custom.regex"
       ],
-      "semanticCommitScope": "dev-tools",
-      "semanticCommitType": "chore"
+      "semanticCommitScope": "dev-tools"
     }
   ]
 }
