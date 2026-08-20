@@ -7,10 +7,8 @@
         "dependency-type:kubernetes-api"
       ],
       "automerge": false,
-      "commitBody": "BREAKING CHANGE",
       "commitMessagePrefix": "feat(kubernetes-api)!:",
       "description": "update kubernetes-api versions",
-      "groupName": "kubernetes-api: {{packageName}}",
       "matchDatasources": [
         "kubernetes-api"
       ],
@@ -18,7 +16,7 @@
       "semanticCommits": "disabled"
     },
     {
-      "description": "configure version separation for kubernetes and flux versions",
+      "description": "configure version separation for kubernetes and flux versions. minor releases here can carry breaking changes, so patches are separated from minors as well: that keeps a patch on the current minor stream available as its own pull request instead of only ever being offered the next minor",
       "matchPackageNames": [
         "flux2",
         "fluxcd/flux2",
@@ -28,7 +26,7 @@
         "kubernetes/kubernetes"
       ],
       "separateMajorMinor": true,
-      "separateMinorPatch": false,
+      "separateMinorPatch": true,
       "separateMultipleMajor": true,
       "separateMultipleMinor": true
     },
