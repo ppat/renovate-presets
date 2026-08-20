@@ -6,10 +6,10 @@
         "automerge:off"
       ],
       "automerge": false,
-      "commitBody": "BREAKING CHANGE",
       "commitMessageAction": "update",
       "commitMessageExtra": "({{currentVersion}} -> {{newVersion}})",
-      "commitMessageTopic": "{{depName}}",
+      "commitMessagePrefix": "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}!:",
+      "commitMessageTopic": "{{lowercase depName}}",
       "description": "defaults for breaking changes",
       "matchUpdateTypes": [
         "major"
