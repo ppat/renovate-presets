@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0](https://github.com/ppat/renovate-presets/compare/v0.2.1...v0.3.0) (2026-08-20)
+
+
+### Miscellaneous
+
+* **dev-tools:** update davidanson/markdownlint-cli2 (non-major) ([#135](https://github.com/ppat/renovate-presets/issues/135)) ([dbf32ec](https://github.com/ppat/renovate-presets/commit/dbf32ec1a8770f343a0a40dd9a72764878ef1892))
+* **github-actions:** update ppat/github-workflows (v3.3.1 -&gt; v4.0.0) ([#133](https://github.com/ppat/renovate-presets/issues/133)) ([2a7c2a1](https://github.com/ppat/renovate-presets/commit/2a7c2a1190e54be822a830e7daa8e208e09a9f0b))
+* **github-actions:** update ppat/github-workflows (v4.0.0 -&gt; v4.2.0) ([#136](https://github.com/ppat/renovate-presets/issues/136)) ([3693fbe](https://github.com/ppat/renovate-presets/commit/3693fbe9bf9cc2acf1161aa42ee30c45dd42cd33))
+* **github-actions:** update ppat/github-workflows (v4.2.0 -&gt; v4.4.0) ([#137](https://github.com/ppat/renovate-presets/issues/137)) ([aa277e7](https://github.com/ppat/renovate-presets/commit/aa277e79f7d9e0b8926c7150c7f0461096019883))
+
+
+### ✨ Features
+
+* **dev-tools:** add bun to dev-tools manager list ([#140](https://github.com/ppat/renovate-presets/issues/140)) ([6ecce70](https://github.com/ppat/renovate-presets/commit/6ecce70c9487e0135acbb9942bdf423e319ca3eb))
+
 ## [0.2.1](https://github.com/ppat/renovate-presets/compare/v0.2.0...v0.2.1) (2026-07-03)
 
 
