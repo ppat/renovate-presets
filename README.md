@@ -25,6 +25,30 @@ presets can emit, or Renovate's own pull requests fail lint and dependency updat
 | `release` | release machinery, and the release cuts themselves |
 | `renovate` | the repo's own Renovate configuration |
 
+## Major updates are marked breaking
+
+`default.json` puts `!` in the header of every **major** update — `feat(scope)!:`, or `feat!:` in a repo
+that sets no scope. Conventional Commits readers and release-please both key on that marker, so a major
+dependency bump cuts a **breaking** release rather than a quiet one.
+
+This is deliberately conservative: a shared preset cannot know whether a given dependency reaches your
+consumers, and marking too many majors breaking is loud and reversible, whereas missing one ships a
+breaking change as a patch.
+
+**If a major genuinely cannot affect your consumers** — an internal linter, a test fixture, a pin used only
+by your own CI — override the prefix locally for those paths and re-add `!` only where it belongs:
+
+```jsonc
+// strip the inherited marker, then put it back for what actually ships
+{ "matchUpdateTypes": ["major"],
+  "commitMessagePrefix": "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:" },
+{ "matchUpdateTypes": ["major"], "matchFileNames": ["<paths that ship>"],
+  "commitMessagePrefix": "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}!:" }
+```
+
+Note that setting `commitMessagePrefix` yourself disables Renovate's own lower-casing of the subject line,
+so pair it with `"commitMessageTopic": "{{lowercase depName}}"` if you want the previous casing.
+
 ### `internal-dependencies` vs `shipped-dependencies`
 
 One question decides it, asked per file:
