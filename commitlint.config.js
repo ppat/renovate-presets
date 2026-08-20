@@ -34,10 +34,10 @@ module.exports = {
     'scope-enum': [2, 'always',
       [
         '',
+        'github-actions',
+        'internal-dependencies',
         'release',
-        'renovate-presets',
-        'dev-tools',
-        'github-actions'
+        'renovate-presets'
       ]
     ],
 

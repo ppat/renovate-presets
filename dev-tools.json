@@ -21,7 +21,7 @@
         "npm",
         "poetry"
       ],
-      "semanticCommitScope": "dev-tools",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
       "schedule": [
         "every 14 day"
@@ -42,7 +42,7 @@
       "matchManagers": [
         "pep621"
       ],
-      "semanticCommitScope": "dev-tools",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
       "schedule": [
         "every 14 day"
@@ -62,7 +62,7 @@
       "matchManagers": [
         "mise"
       ],
-      "semanticCommitScope": "dev-tools",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
       "schedule": [
         "every 14 day"
@@ -75,7 +75,7 @@
         "jdx/mise"
       ],
       "minimumReleaseAge": "3 days",
-      "semanticCommitScope": "dev-tools",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
       "schedule": [
         "every 7 day"
@@ -91,7 +91,7 @@
       "matchManagers": [
         "pre-commit"
       ],
-      "semanticCommitScope": "dev-tools",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
       "schedule": [
         "every 14 day"
@@ -106,7 +106,7 @@
       "matchUpdateTypes": [
         "lockFileMaintenance"
       ],
-      "semanticCommitScope": "dev-tools",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
       "schedule": [
         "every 14 day"
@@ -128,7 +128,7 @@
         "renovatebot/renovate"
       ],
       "minimumReleaseAge": "3 days",
-      "semanticCommitScope": "dev-tools",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
       "schedule": [
         "every 7 day"

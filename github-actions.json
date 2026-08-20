@@ -104,7 +104,7 @@
       "matchManagers": [
         "custom.regex"
       ],
-      "semanticCommitScope": "dev-tools",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore"
     }
   ]
