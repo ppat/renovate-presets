@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.0.0](https://github.com/ppat/renovate-presets/compare/v0.3.0...v1.0.0) (2026-08-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **renovate-presets:** every major dependency update now carries '!' and will be treated as a breaking change by release-please. Repos on 0.x with bump-minor-pre-major get a minor; repos past 1.0 get a major. A repo where some majors cannot reach its consumers should strip the marker and re-add it only for the paths that ship -- see the README section added here for the pattern.
+* **renovate-presets:** every repo extending these presets must add 'internal-dependencies' to its commitlint scope-enum before bumping its pin, or Renovate's own pull requests will fail commit-message lint and dependency updates will stop. 'dev-tools' can be dropped from the enum at the same time. Repos pinned to an earlier tag are unaffected until they move.
+
+### Miscellaneous
+
+* **github-actions:** update ppat/github-workflows (v4.4.0 -&gt; v5.0.0) ([#138](https://github.com/ppat/renovate-presets/issues/138)) ([9488a51](https://github.com/ppat/renovate-presets/commit/9488a51f110b9e04fcc8f724353588ec6ec71d04))
+
+
+### 🛠 Improvements
+
+* add CLAUDE.md covering blast radius, verification and the packageRules traps ([#147](https://github.com/ppat/renovate-presets/issues/147)) ([84b464f](https://github.com/ppat/renovate-presets/commit/84b464f36dfa7097d3978f6828d02e93fe242dca))
+
+
+### ✨ Features
+
+* **renovate-presets:** mark major updates breaking with '!' instead of an unparseable body ([#148](https://github.com/ppat/renovate-presets/issues/148)) ([6975695](https://github.com/ppat/renovate-presets/commit/6975695196dd3fb463a78da149c2ef0fac1b7813))
+* **renovate-presets:** rename the dev-tools commit scope to internal-dependencies ([#142](https://github.com/ppat/renovate-presets/issues/142)) ([c1c4f58](https://github.com/ppat/renovate-presets/commit/c1c4f589d5404d95184e64eb7f339d3ce89a9445))
+
+
+### 🚀 Enhancements + Bug Fixes
+
+* **github-actions:** drop a groupName that renovate deletes before it can apply ([#143](https://github.com/ppat/renovate-presets/issues/143)) ([be3a1fb](https://github.com/ppat/renovate-presets/commit/be3a1fb384a081cb50838aee2c1f180cc8bd89fb))
+* **renovate-presets:** drop the inert BREAKING CHANGE body and align the kubernetes rules with their descriptions ([#149](https://github.com/ppat/renovate-presets/issues/149)) ([eafcc4e](https://github.com/ppat/renovate-presets/commit/eafcc4e0c588ef6aa45ec208bbe2626010c5d8a7))
+
 ## [0.3.0](https://github.com/ppat/renovate-presets/compare/v0.2.1...v0.3.0) (2026-08-20)
 
 
