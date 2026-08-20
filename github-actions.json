@@ -97,7 +97,6 @@
         "dependency-type:dev-tools"
       ],
       "description": "update regex dependencies of github-actions",
-      "groupName": "{{packageName}} (github-actions dependency)",
       "matchFileNames": [
         ".github/workflows/**"
       ],
