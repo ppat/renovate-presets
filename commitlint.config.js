@@ -36,8 +36,10 @@ module.exports = {
         '',
         'release',
         'renovate-presets',
-        'dev-tools',
-        'github-actions'
+        'github-actions',
+        'internal-dependencies',
+        'kubernetes-api',
+        'shipped-dependencies'
       ]
     ],
 
