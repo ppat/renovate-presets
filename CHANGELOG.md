@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0](https://github.com/ppat/renovate-presets/compare/v1.0.0...v2.0.0) (2026-09-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **github-actions:** update ppat/github-workflows (v5.0.1 -> v6.0.0) ([#154](https://github.com/ppat/renovate-presets/issues/154))
+
+### Miscellaneous
+
+* **github-actions:** update github-workflows to v7.0.0 ([#159](https://github.com/ppat/renovate-presets/issues/159)) ([7bf8dae](https://github.com/ppat/renovate-presets/commit/7bf8dae045bf7f4750a1c5bb772f5d4a2838d54e))
+* **github-actions:** update ppat/github-workflows (v5.0.0 -&gt; v5.0.1) ([#150](https://github.com/ppat/renovate-presets/issues/150)) ([ac4cf46](https://github.com/ppat/renovate-presets/commit/ac4cf46f164a24301524fb2bca703e29b3c3dc3c))
+* **github-actions:** update ppat/github-workflows (v5.0.1 -&gt; v6.0.0) ([#154](https://github.com/ppat/renovate-presets/issues/154)) ([920d24d](https://github.com/ppat/renovate-presets/commit/920d24d2c42e86bdbe1239373d3c955ff988a724))
+* **github-actions:** update ppat/github-workflows (v6.0.0 -&gt; v6.1.0) ([#158](https://github.com/ppat/renovate-presets/issues/158)) ([e25f664](https://github.com/ppat/renovate-presets/commit/e25f664c2d6b9e93088a4712026498743807430a))
+
 ## [1.0.0](https://github.com/ppat/renovate-presets/compare/v0.3.0...v1.0.0) (2026-08-20)
 
 
