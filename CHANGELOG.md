@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/ppat/renovate-presets/compare/v1.0.0...v1.0.1) (2026-11-02)
+
+
+### 🚀 Enhancements + Bug Fixes
+
+* **renovate-presets:** various updates to dev-tools and github-actions presets ([#170](https://github.com/ppat/renovate-presets/issues/170)) ([153cf0d](https://github.com/ppat/renovate-presets/commit/153cf0d5a735f35e7f92878f96adabe277d1e833))
+
 ## [1.0.0](https://github.com/ppat/renovate-presets/compare/v0.3.0...v1.0.0) (2026-08-20)
 
 
