@@ -20,6 +20,9 @@
       "automerge": true,
       "description": "auto merge non-major versions of trusted github-actions after 3 days",
       "groupName": "trusted github-actions",
+      "matchDepTypes": [
+        "action"
+      ],
       "matchManagers": [
         "github-actions"
       ],
@@ -27,7 +30,6 @@
         "/^actions\//",
         "/^docker\//",
         "/^github\//",
-        "/^googleapis\//",
         "/^tailscale\//"
       ],
       "matchUpdateTypes": [
@@ -44,6 +46,9 @@
       ],
       "automerge": false,
       "description": "manual merge major versions of trusted github-actions after 30 days",
+      "matchDepTypes": [
+        "action"
+      ],
       "matchManagers": [
         "github-actions"
       ],
@@ -51,7 +56,6 @@
         "/^actions\//",
         "/^docker\//",
         "/^github\//",
-        "/^googleapis\//",
         "/^tailscale\//"
       ],
       "matchUpdateTypes": [
@@ -73,7 +77,6 @@
         "!/^actions\//",
         "!/^docker\//",
         "!/^github\//",
-        "!/^googleapis\//",
         "!/^tailscale\//"
       ],
       "minimumReleaseAge": "30 days"
@@ -81,6 +84,10 @@
     {
       "automerge": true,
       "description": "update ppat github actions and reusable workflows (with no release age delay)",
+      "matchDepTypes": [
+        "action",
+        "workflow"
+      ],
       "matchManagers": [
         "github-actions"
       ],

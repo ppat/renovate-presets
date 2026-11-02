@@ -9,58 +9,74 @@
         "dependency-type:dev-tools"
       ],
       "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
-      "description": "update npm/poetry dev dependencies",
-      "groupName": "{{manager}} packages",
-      "matchDepTypes": [
-        "devDependencies",
-        "dev-dependencies",
-        "dev"
-      ],
+      "description": "update gomod/npm/pep621/poetry dependencies with a 7-day soak",
+      "groupName": "{{manager}}-{{depType}}",
       "matchManagers": [
-        "bun",
+        "gomod",
         "npm",
+        "pep621",
         "poetry"
       ],
-      "semanticCommitScope": "internal-dependencies",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 14 day"
-      ]
+      "minimumReleaseAge": "7 days"
     },
     {
       "addLabels": [
         "dependency-type:dev-tools"
       ],
       "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
-      "description": "update pep621 dependencies",
-      "groupName": "{{manager}}-{{depType}}",
-      "matchDepTypes": [
-        "build-system.requires",
-        "dependency-groups",
-        "tool.uv.dev-dependencies"
-      ],
+      "description": "update bun/cargo/mise/pre-commit dependencies with a 7-day soak",
+      "groupName": "{{manager}}",
       "matchManagers": [
-        "pep621"
+        "bun",
+        "cargo",
+        "mise",
+        "pre-commit"
       ],
-      "semanticCommitScope": "internal-dependencies",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 14 day"
-      ]
+      "minimumReleaseAge": "7 days"
     },
     {
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
-      "description": "update mise dependencies (only within mise.toml files at repository root)",
-      "groupName": "{{manager}} packages",
-      "matchFileNames": [
-        "mise.toml",
-        ".mise.toml"
+      "description": "update language runtimes (bun/uv) with a 30-day soak",
+      "matchPackageNames": [
+        "astral-sh/uv",
+        "bun",
+        "oven-sh/bun",
+        "uv"
       ],
-      "matchManagers": [
-        "mise"
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "minimumReleaseAge": "30 days"
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "update language runtimes (go/node/python/rust) with a 90-day soak",
+      "groupName": "{{packageName}}",
+      "matchPackageNames": [
+        "go",
+        "golang/go",
+        "node",
+        "nodejs",
+        "python",
+        "rust",
+        "rust-lang/rust"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "minimumReleaseAge": "90 days"
+    },
+    {
+      "description": "update lockfiles",
+      "groupName": "{{manager}} lockfile",
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
       ],
       "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
@@ -74,43 +90,9 @@
       "matchPackageNames": [
         "jdx/mise"
       ],
-      "minimumReleaseAge": "3 days",
+      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "internal-dependencies",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 7 day"
-      ]
-    },
-    {
-      "addLabels": [
-        "dependency-type:dev-tools"
-      ],
-      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
-      "description": "update pre-commit dependencies",
-      "groupName": "{{manager}} packages",
-      "matchManagers": [
-        "pre-commit"
-      ],
-      "semanticCommitScope": "internal-dependencies",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 14 day"
-      ]
-    },
-    {
-      "addLabels": [
-        "dependency-type:dev-tools"
-      ],
-      "description": "update lockfiles",
-      "groupName": "{{manager}} lockfile",
-      "matchUpdateTypes": [
-        "lockFileMaintenance"
-      ],
-      "semanticCommitScope": "internal-dependencies",
-      "semanticCommitType": "chore",
-      "schedule": [
-        "every 14 day"
-      ]
+      "semanticCommitType": "chore"
     },
     {
       "description": "update renovate itself",
@@ -127,7 +109,7 @@
         "renovate/renovate",
         "renovatebot/renovate"
       ],
-      "minimumReleaseAge": "3 days",
+      "minimumReleaseAge": "7 days",
       "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore",
       "schedule": [
