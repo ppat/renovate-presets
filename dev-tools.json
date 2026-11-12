@@ -24,13 +24,26 @@
         "dependency-type:dev-tools"
       ],
       "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
-      "description": "update bun/cargo/mise/pre-commit dependencies with a 7-day soak",
+      "commitMessagePrefix": "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:",
+      "description": "update pre-commit dependencies with a 7-day soak",
+      "groupName": "pre-commit",
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "minimumReleaseAge": "7 days",
+      "semanticCommitType": "chore"
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "commitMessageExtra": "({{#if isMajor}}major{{else}}non-major{{/if}})",
+      "description": "update bun/cargo/mise dependencies with a 7-day soak",
       "groupName": "{{manager}}",
       "matchManagers": [
         "bun",
         "cargo",
-        "mise",
-        "pre-commit"
+        "mise"
       ],
       "minimumReleaseAge": "7 days"
     },

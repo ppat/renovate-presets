@@ -5,6 +5,7 @@
       "addLabels": [
         "dependency-type:github-actions"
       ],
+      "commitMessagePrefix": "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:",
       "description": "github-actions common settings",
       "matchManagers": [
         "github-actions"
