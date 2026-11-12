@@ -31,6 +31,8 @@
   "prHourlyLimit": 0,
   "printConfig": true,
   "rebaseWhen": "conflicted",
+  "commitMessagePrefix": "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:",
+  "semanticCommitType": "chore",
   "suppressNotifications": [
     "prEditedNotification",
     "prIgnoreNotification"
