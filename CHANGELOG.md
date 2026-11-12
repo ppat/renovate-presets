@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/ppat/renovate-presets/compare/v1.0.1...v1.1.0) (2026-11-12)
+
+
+### ✨ Features
+
+* **renovate-presets:** github-actions bumps + pre-commit bumps should always use chore and never have breaking markers ([#179](https://github.com/ppat/renovate-presets/issues/179)) ([56cf0be](https://github.com/ppat/renovate-presets/commit/56cf0be482c8ed4171b3da7174fe880697168ec5))
+
+
+### 🚀 Enhancements + Bug Fixes
+
+* **renovate-presets:** group each language runtime in one branch across managers ([#177](https://github.com/ppat/renovate-presets/issues/177)) ([a9a2009](https://github.com/ppat/renovate-presets/commit/a9a20096c03129e07a8d3132c58d345c75a07060))
+
 ## [1.0.1](https://github.com/ppat/renovate-presets/compare/v1.0.0...v1.0.1) (2026-11-02)
 
 
