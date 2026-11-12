@@ -67,3 +67,25 @@ the shipped pins live with the actions. So the presets emit `internal-dependenci
 default, and a repo whose artifact includes those paths overrides the scope locally with a `packageRules`
 entry keyed on the file. Nothing here emits `shipped-dependencies`; the name is defined here so that every
 repo making that override uses the same word.
+
+**A runtime's pins share one branch, and a branch carries one commit header.** `dev-tools` puts every major
+and minor update of the Go, Node, Python and Rust runtimes into one group per runtime, whichever file pins
+it, so `go.mod` and `mise.toml` move together. Renovate gives that branch the highest-priority type among
+its updates (`feat` over `fix` over `chore`) and the scope of whichever update it sorts first. When a
+runtime's pins carry different scopes by file, the group's header can be false for some of them. That
+happens when you scope them differently yourself, for example `mise.toml` as `internal-dependencies` and
+`go.mod` as shipped, which can land `feat(internal-dependencies)`. It also happens with no rule of yours: a
+regex-managed runtime pin in a workflow takes the scope `github-actions` or `github-actions-provider` gives
+it, a mise pin takes none, and the shared branch can land the mise pin's bare `feat:`. The branch's
+`commitMessagePrefix` also comes from its first update, so a prefix you set by path, such as the
+major-marker override above, can drop the `!` from a shipped major or leave empty parentheses. Either split
+the group locally by setting a different `groupName` per file, or restate the runtime group in local rules
+placed after your per-file overrides, matching every `packageName` the runtime takes:
+
+```jsonc
+// one header for every go pin: reset the prefix so Renovate assembles it, then restore `!` for majors
+{ "matchPackageNames": ["go", "golang/go"], "matchUpdateTypes": ["major", "minor"],
+  "semanticCommitType": "feat", "semanticCommitScope": "", "commitMessagePrefix": "" },
+{ "matchPackageNames": ["go", "golang/go"], "matchUpdateTypes": ["major"],
+  "commitMessagePrefix": "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}!:" }
+```

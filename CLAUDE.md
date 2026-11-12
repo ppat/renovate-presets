@@ -88,9 +88,24 @@ defects hide, so do not filter them out of the checks.
   its own name rather than via its manifest.
 - **List-level negation does not work.** Renovate evaluates the patterns with `.some()`, so
   `["a/**", "!a/b"]` still matches `a/b`. Use an extglob inside one pattern — `a/!(b)*` — which does work.
-- **`groupName` with a `{{packageName}}` template is inert.** `depNames` is deduplicated when computing
-  `groupEligible`, so a per-package group is always single-dep, `groupSingleUpdates` defaults to `false`,
-  and Renovate deletes `groupName` outright. A group only engages when it spans several packages.
+- **`groupName` picks the branch even when the group never engages.** The branch name is built from the
+  group slug in `flattenUpdates`, before `generateBranchConfig` judges `groupEligible`. When the branch
+  holds one `depName` at one target version, `groupSingleUpdates` defaults to `false` and Renovate deletes
+  `groupName`, so only the group's commit and pull request settings are dropped. The branch stays. A
+  templated `groupName` therefore still pulls a dependency out of a broader group into its own branch.
+- **One package has a different `packageName` per manager**, and `matchPackageNames` tests `packageName`
+  alone. Go is `go` in `go.mod` and `golang/go` in mise and asdf, Python is `python` in pyproject and
+  pyenv and `python/cpython` in mise and asdf. A `{{packageName}}` group splits such a package across
+  branches, so a group meant to span managers takes a literal name and lists every `packageName`.
+- **A group branch carries one commit header.** `generateBranchConfig` takes the highest-priority
+  `semanticCommitType` among the branch's upgrades (`feat` over `fix`, `build`, `ci`, `chore`) and every
+  other commit setting, the scope included, from the first upgrade after sorting by file position and
+  `depName`. A group whose members carry different scopes by file therefore lands one header that is
+  false for some of them. The difference can come from a consumer's per-file override, which can land
+  `feat(internal-dependencies)`, or from these presets alone: a `custom.regex` workflow pin takes the
+  actions presets' scope and a mise pin takes none, so the shared branch can drop the scope. Resolve per branch,
+  not per upgrade, when checking what a grouping change does to headers. The preset cannot see per-file
+  overrides, so `README.md` tells consumers to restate or split the group locally.
 - **Consolidating one dependency across many files is `branchTopic`, not grouping.** It keys on the dep and
   target version, so N files already collapse to one branch and one pull request with no group configured.
 - **Renovate has no "emit a breaking marker" option.** `!` requires hand-building the header with

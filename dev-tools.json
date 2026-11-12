@@ -55,14 +55,57 @@
       "addLabels": [
         "dependency-type:dev-tools"
       ],
-      "description": "update language runtimes (go/node/python/rust) with a 90-day soak",
-      "groupName": "{{packageName}}",
+      "description": "update the go language runtime with a 90-day soak, in one group across every manager that pins it (each manager names it by its own packageName)",
+      "groupName": "go",
       "matchPackageNames": [
         "go",
-        "golang/go",
+        "golang/go"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "minimumReleaseAge": "90 days"
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "update the node language runtime with a 90-day soak, in one group across every manager that pins it (each manager names it by its own packageName)",
+      "groupName": "node",
+      "matchPackageNames": [
         "node",
-        "nodejs",
+        "nodejs"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "minimumReleaseAge": "90 days"
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "update the python language runtime with a 90-day soak, in one group across every manager that pins it (each manager names it by its own packageName)",
+      "groupName": "python",
+      "matchPackageNames": [
         "python",
+        "python/cpython"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "minimumReleaseAge": "90 days"
+    },
+    {
+      "addLabels": [
+        "dependency-type:dev-tools"
+      ],
+      "description": "update the rust language runtime with a 90-day soak, in one group across every manager that pins it (each manager names it by its own packageName)",
+      "groupName": "rust",
+      "matchPackageNames": [
         "rust",
         "rust-lang/rust"
       ],
