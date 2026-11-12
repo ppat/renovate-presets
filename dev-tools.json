@@ -31,6 +31,7 @@
         "pre-commit"
       ],
       "minimumReleaseAge": "7 days",
+      "semanticCommitScope": "internal-dependencies",
       "semanticCommitType": "chore"
     },
     {
